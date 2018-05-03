@@ -1,0 +1,21 @@
+[package]
+authors = ["James Howard <jrobhoward@gmail.com>"]
+description = "Fast concurrent file visitor library"
+license = "MIT"
+name = "cfilevisit"
+version = "0.0.1"
+
+[dependencies]
+env_logger = "0.5.9"
+getopts = "0.2"
+log = "0.4.1"
+time = "0.1.39"
+
+[profile.release]
+codegen-units = 1
+debug = false
+debug-assertions = false
+lto = true
+opt-level = 3
+panic = 'abort'
+rpath = false
